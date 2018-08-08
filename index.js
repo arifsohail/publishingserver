@@ -20,7 +20,7 @@ var path = require('path');
 
 var parentDomain = 'mylatestsite.tk';
 //Setting up server
-var server = app.listen(process.env.PORT || 8080, function () {
+var server = app.listen(process.env.PORT || 80, function () {
   var port = server.address().port;
   console.log("App now running on port", port);
 });
@@ -403,15 +403,17 @@ app.post('/api/domain-publish', async (req, res) => {
 
 app.post('/api/addcontact', async (req, res) => {
   //let api_key = req.body.api_key;
+  let email = req.body.email;
   let mailchimp = new Mailchimp('158377d9b2e426547c76dfcd7193a84b-us18');
   let path = '/lists/de66870087/members';
 
   mailchimp.post(`${path}`, {
-  email_address : 'bbc@gmail.com',
+  email_address : `${email}`,
   status : 'subscribed'
 })
 .then(function(results) {
 console.log(results);
+res.send({"value":"true"});
 })
 .catch(function (err) {
 console.log(err);
