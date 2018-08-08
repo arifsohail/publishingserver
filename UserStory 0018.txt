@@ -1,0 +1,47 @@
+﻿UserStory ID Number: 0018
+
+As a User…
+I want the ability to publish the final build to an amazon s3 site
+
+If I send you (input)
+"name of site"
+
+The expected result should be (output)...
+url of final amazon s3 site (if i visit this url, i should be able to see my site)
+
+Additional Remarks:
+The objective is to generate websites using http://gatsbyjs.org via lambda calls...
+
+
+=============================================================================
+Installation Instructions
+=============================================================================
+
+
+=============================================================================
+Unit Testing
+=============================================================================
+
+
+=============================================================================
+Videos
+=============================================================================
+ScreenCast to publish Gatsby Site on s3 bucket
+https://screencast-o-matic.com/watch/cbjViClArM
+
+
+=============================================================================
+API End point
+=============================================================================
+Web service URL: http://34.211.109.30:8080/api/publish-gatsby-site
+(same code as UserStory0014)
+
+Post Request:
+
+Header :
+Content-Type: application/json
+
+Body parameters
+{
+	"site_name" : "multidots"
+}

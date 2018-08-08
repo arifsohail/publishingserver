@@ -1,0 +1,89 @@
+﻿UserStory ID Number: 0014
+
+As a User…
+I want the ability to create a new gatsby site
+
+If I send you (input)
+"name of site"
+
+The expected result should be (output)...
+`true` or `false`
+
+Additional Remarks:
+The objective is to generate websites using http://gatsbyjs.org via lambda calls...
+
+
+=============================================================================
+Installation Instructions
+=============================================================================
+extract the zip
+
+go to the root directory run npm install command to install dependency.
+
+then inside the root directory config.js file in that file below settings is used for the window and linux system.
+
+so as per your directory structure set the base directory, directory and default gatsbysite.
+
+inside default gatsbysite directory you need to clone gatsbysite code so whenever you create new site it will copy from default site and created your new site.
+
+if (isWin) {
+	return {
+		basedirectory: 'E:/gatsbysite/',
+		directory: 'E:/gatsbysite/',
+		defaultsite: 'E:/gatsbysite/default/',
+		copyCommand: 'XCOPY default'
+	}
+} else {
+	return {
+		directory: '/var/www/gatsbysite/',
+		basedirectory: '/var/www/',
+		defaultsite: '/var/www/gatsbysite/default/',
+		copyCommand: 'sudo cp -r default/',
+		permission: 'sudo chmod -R 777',
+	}
+}
+
+run below command to execute the code.
+
+node index.js
+
+http://localhost:8080 server will start and
+
+http://localhost:8080/api/create-gatsby-site
+
+Post Request:
+
+Header :
+Content-Type: application/json
+
+Body parameters
+{
+	"site_name" : "multidots"
+}
+
+
+=============================================================================
+Unit Testing
+=============================================================================
+To run unit test run
+npm test command
+
+
+=============================================================================
+Videos
+=============================================================================
+ScreenCast to create new Gatsby Site
+https://screencast-o-matic.com/watch/cbjViulArO
+
+
+=============================================================================
+API End point: http://34.211.109.30:8080/api/create-gatsby-site
+=============================================================================
+
+Post Request:
+Header:
+Content-Type: application/json
+Body parameters:
+{
+	"site_name" : "multidots"
+}

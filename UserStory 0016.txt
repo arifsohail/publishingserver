@@ -1,0 +1,46 @@
+﻿UserStory ID Number: 0016
+
+As a User…
+I want the ability to publish page content to the `src/pages` folder (use amazon  s3 to host the page content/files)
+
+If I send you (input)
+an array of file content.  For example...
+
+[
+   {filename: 'index.jsx', content: '<div>page1</div>'},
+   {filename: 'page2.jsx', content: '<div>page2</div>'},
+   { ...etc. },
+]
+
+The expected result should be (output)...
+`true` or `false` (if i visit the url in step 3, the page content should automatically update)
+
+Additional Remarks:
+The objective is to generate websites using http://gatsbyjs.org via lambda calls...
+
+
+=============================================================================
+Installation Instructions
+=============================================================================
+
+
+=============================================================================
+Unit Testing
+=============================================================================
+
+
+=============================================================================
+Videos
+=============================================================================
+ScreenCast to publish Gatsby pages
+https://screencast-o-matic.com/watch/cbjVialAra
+
+
+=============================================================================
+API End point
+=============================================================================
+API URL: http://34.211.109.30:8080/api/publish-gatsby-pages
+To make request to API I have attached the sample request file (pubish-page.php)
+
+To execute this in local: Same code as userstory 14.
+http://localhost:8080/api/publish-gatsby-pages

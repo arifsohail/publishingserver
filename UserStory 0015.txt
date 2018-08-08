@@ -1,0 +1,33 @@
+﻿UserStory ID Number: 0015
+
+As a User…
+I want the ability to start a "hot-reloading" development environment (must allow for multiple development environments at once)
+
+If I send you (input)
+"name of site"
+
+The expected result should be (output)...
+url to preview my site (should automatically update as I publish new page content)
+
+Additional Remarks:
+The objective is to generate websites using http://gatsbyjs.org via lambda calls...
+
+
+=============================================================================
+Installation Instructions
+=============================================================================
+
+
+=============================================================================
+Unit Testing
+=============================================================================
+
+
+=============================================================================
+Videos
+=============================================================================
+
+
+=============================================================================
+API End point
+=============================================================================

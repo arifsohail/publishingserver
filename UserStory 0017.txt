@@ -1,0 +1,58 @@
+﻿UserStory ID Number: 0017
+
+As a User…
+I want the ability to trigger the `gatsby build` command to generate the production build of the site
+
+If I send you (input)
+"name of site"
+
+The expected result should be (output)...
+`true` or `false` (i should see a production build version of the site)
+
+Additional Remarks:
+The objective is to generate websites using http://gatsbyjs.org via lambda calls...
+
+
+=============================================================================
+Installation Instructions
+=============================================================================
+
+
+=============================================================================
+Unit Testing
+=============================================================================
+
+
+=============================================================================
+Videos
+=============================================================================
+ScreenCast to build Gatsby Site
+https://screencast-o-matic.com/watch/cbjViglArH
+
+
+=============================================================================
+API End point
+=============================================================================
+
+Web service URL: http://34.211.109.30:8080/api/build-gatsby-site
+(same code as UserStory 0014)
+
+Post Request:
+
+Header :
+Content-Type: application/json
+
+Body parameters
+{
+	"site_name" : "multidots"
+}
+
+To execute in local computer: http://localhost:8080/api/build-gatsby-site
+
+Body parameters
+{
+	"site_name" : "multidots"
+}
+
+Header :
+Content-Type: application/json
